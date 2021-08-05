@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Gráficos/jugo de bloques/element_green_square.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Prefabs/new_physicsmaterial.tres" type="PhysicsMaterial" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 245.633, 22.4257 )
+
+[node name="Pared1" type="StaticBody2D" groups=[
+"Walls",
+]]
+physics_material_override = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 1, 15 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 1 )

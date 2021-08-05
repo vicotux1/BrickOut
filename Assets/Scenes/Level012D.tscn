@@ -1,0 +1,150 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Gráficos/BG.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Prefabs/Ball/Ball2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Prefabs/Bricks/BrickRed2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Prefabs/Bricks/BrickBlue2D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Prefabs/Player/Player2D.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Prefabs/Bricks/Pared1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Prefabs/Bricks/Pared4.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Prefabs/Bricks/UIControl.tscn" type="PackedScene" id=8]
+
+[node name="Level012D" type="Node2D"]
+
+[node name="Backgound1" type="Sprite" parent="."]
+position = Vector2( 511.751, 299.742 )
+scale = Vector2( 1.05, 1.05 )
+z_index = -6
+texture = ExtResource( 1 )
+
+[node name="BrickRed2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 238.789, 199.604 )
+
+[node name="BrickRed2D2" parent="BrickRed2D" instance=ExtResource( 3 )]
+position = Vector2( 159.002, 2.65002 )
+
+[node name="BrickBlue2D" parent="BrickRed2D" instance=ExtResource( 4 )]
+position = Vector2( 76.851, 2.65009 )
+mode = 0
+physics_material_override = null
+
+[node name="BrickBlue2D2" parent="BrickRed2D" instance=ExtResource( 4 )]
+position = Vector2( 230.553, 10.6002 )
+mode = 0
+physics_material_override = null
+
+[node name="BrickRed2D4" parent="BrickRed2D" instance=ExtResource( 3 )]
+position = Vector2( 307.404, 7.95007 )
+
+[node name="BrickRed2D3" parent="BrickRed2D" instance=ExtResource( 3 )]
+position = Vector2( 466.406, 10.6001 )
+
+[node name="BrickBlue2D4" parent="BrickRed2D" instance=ExtResource( 4 )]
+position = Vector2( 384.255, 10.6002 )
+mode = 0
+physics_material_override = null
+
+[node name="BrickBlue2D3" parent="BrickRed2D" instance=ExtResource( 4 )]
+position = Vector2( 537.957, 18.5502 )
+mode = 0
+physics_material_override = null
+
+[node name="BrickRed2D8" parent="BrickRed2D" instance=ExtResource( 3 )]
+position = Vector2( 2.65002, 58.3007 )
+
+[node name="BrickRed2D7" parent="BrickRed2D" instance=ExtResource( 3 )]
+position = Vector2( 161.652, 60.9507 )
+
+[node name="BrickBlue2D8" parent="BrickRed2D" instance=ExtResource( 4 )]
+position = Vector2( 79.501, 60.9508 )
+mode = 0
+physics_material_override = null
+
+[node name="BrickBlue2D7" parent="BrickRed2D" instance=ExtResource( 4 )]
+position = Vector2( 233.203, 68.9009 )
+mode = 0
+physics_material_override = null
+
+[node name="BrickRed2D6" parent="BrickRed2D" instance=ExtResource( 3 )]
+position = Vector2( 310.054, 66.2508 )
+
+[node name="BrickRed2D5" parent="BrickRed2D" instance=ExtResource( 3 )]
+position = Vector2( 469.056, 68.9008 )
+
+[node name="BrickBlue2D6" parent="BrickRed2D" instance=ExtResource( 4 )]
+position = Vector2( 386.905, 68.9009 )
+mode = 0
+physics_material_override = null
+
+[node name="BrickBlue2D5" parent="BrickRed2D" instance=ExtResource( 4 )]
+position = Vector2( 540.607, 76.851 )
+mode = 0
+physics_material_override = null
+
+[node name="BrickRed2D12" parent="BrickRed2D" instance=ExtResource( 3 )]
+position = Vector2( 0, 113.951 )
+
+[node name="BrickRed2D11" parent="BrickRed2D" instance=ExtResource( 3 )]
+position = Vector2( 159.002, 116.602 )
+
+[node name="BrickBlue2D12" parent="BrickRed2D" instance=ExtResource( 4 )]
+position = Vector2( 76.851, 116.602 )
+mode = 0
+physics_material_override = null
+
+[node name="BrickBlue2D11" parent="BrickRed2D" instance=ExtResource( 4 )]
+position = Vector2( 230.553, 124.552 )
+mode = 0
+physics_material_override = null
+
+[node name="BrickRed2D10" parent="BrickRed2D" instance=ExtResource( 3 )]
+position = Vector2( 307.404, 121.902 )
+
+[node name="BrickRed2D9" parent="BrickRed2D" instance=ExtResource( 3 )]
+position = Vector2( 466.406, 124.552 )
+
+[node name="BrickBlue2D10" parent="BrickRed2D" instance=ExtResource( 4 )]
+position = Vector2( 384.255, 124.552 )
+mode = 0
+physics_material_override = null
+
+[node name="BrickBlue2D9" parent="BrickRed2D" instance=ExtResource( 4 )]
+position = Vector2( 537.957, 132.502 )
+mode = 0
+physics_material_override = null
+
+[node name="Ball2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 503.801, 530.193 )
+Ground = "Piso"
+Walls = "Walls"
+
+[node name="Player2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 517.051, 567.395 )
+
+[node name="Pared1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 148.952, 339.882 )
+rotation = -0.174533
+scale = Vector2( 1, 1.14596 )
+
+[node name="Pared2" parent="Pared1" instance=ExtResource( 6 )]
+position = Vector2( 721.826, 109.554 )
+rotation = -2.82199
+scale = Vector2( 0.975081, 1.03258 )
+
+[node name="Pared3" parent="Pared1" instance=ExtResource( 6 )]
+position = Vector2( 410.381, -168.63 )
+rotation = 1.71654
+scale = Vector2( 0.814419, 1.84212 )
+
+[node name="Pared4" parent="Pared1" instance=ExtResource( 7 )]
+position = Vector2( 306.02, 275.48 )
+rotation = 0.147051
+scale = Vector2( 2.06811, 0.8156 )
+
+[node name="UIControl" parent="." instance=ExtResource( 8 )]
+visible = false
+margin_left = 142.498
+margin_top = 172.107
+margin_right = 142.498
+margin_bottom = 172.107
+rect_scale = Vector2( 0.75, 0.75 )
