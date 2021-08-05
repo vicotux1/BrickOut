@@ -1,0 +1,56 @@
+Ball 
+export var Offset = Vector2(0,0)
+export var Inpulse= Vector2(0,0)
+export var Grupo= ""
+
+func _process(delta):
+	if Input.is_action_just_pressed("Ball"):
+		apply_impulse(Offset, Inpulse)
+
+func _on_BallBody2D_body_entered(body):
+	if body.is_in_group(Grupo):
+			print("coliciono")
+			self.queue_free()
+
+Brick
+
+export var Group = "text"
+
+func _ready():
+	pass # Replace with function body.
+	
+func _on_BallBody2D_body_entered(body):
+	if body.is_in_group(Group):
+		print ("coin")
+		body.queue_free()
+
+Player
+
+export (int) var Speed = 2
+var velocity=Vector2()
+#var b = "text"
+func get_input():
+	velocity = Vector2()
+	if Input.is_action_pressed("D"):
+		velocity.x += 1
+	if Input.is_action_pressed("A"):
+		velocity.x -= 1
+	velocity = velocity.normalized() * Speed
+
+func _ready():
+	pass 
+
+func _physics_process(delta):
+	get_input()
+	velocity = move_and_slide(velocity)
+
+Botones UI
+
+func Load_level_pressed():
+# warning-ignore:return_value_discarded
+	get_tree().change_scene("res://Escenas/Scene01.tscn")
+	
+func _on_QuitButton_pressed():
+	#print("Cerrando Juego")
+	get_tree().quit()
+
