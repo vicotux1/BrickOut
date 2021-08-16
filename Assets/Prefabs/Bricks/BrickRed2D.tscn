@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Gráficos/jugo de bloques/element_red_rectangle.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Prefabs/new_physicsmaterial.tres" type="PhysicsMaterial" id=2]
+[ext_resource path="res://Assets/Prefabs/Bricks/BrickSoun2D.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.6988, 16.3873 )
@@ -12,6 +13,7 @@ extents = Vector2( 33.6988, 16.3873 )
 mode = 1
 physics_material_override = ExtResource( 2 )
 gravity_scale = 0.0
+script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

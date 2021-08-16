@@ -7,8 +7,10 @@ func get_input():
 	velocity = Vector2()
 	if Input.is_action_pressed("D"):
 		velocity.x += 1
+		
 	if Input.is_action_pressed("A"):
 		velocity.x -= 1
+		
 	velocity = velocity.normalized() * Speed
 
 func _ready():
